@@ -1,21 +1,34 @@
-/**
- * OOPSBannerApp prints the literal text "OOPS" to the console.
- *
- * This program demonstrates a basic Java class structure,
- * usage of the main method, and console output.
- *
- * @author Vasantha R
- * @version 1.0
- */
 public class OOPSBannerApp {
 
-    /**
-     * Entry point of the Java application.
-     *
-     * @param args command-line arguments
-     */
     public static void main(String[] args) {
-        // Print OOPS to the console
-        System.out.println("OOPS");
+        // Step 1: Create String array for 7 lines
+        String[] lines = new String[7];
+
+        // Step 2: Populate array using String.join()
+        lines[0] = String.join("",
+                "  *****  ", "  *****  ", " ******  ", "  *****  ");
+
+        lines[1] = String.join("",
+                " *     * ", " *     * ", " *     * ", " *        ");
+
+        lines[2] = String.join("",
+                " *     * ", " *     * ", " *     * ", " *        ");
+
+        lines[3] = String.join("",
+                " *     * ", " *     * ", " ******  ", "  *****  ");
+
+        lines[4] = String.join("",
+                " *     * ", " *     * ", " *        ", "       * ");
+
+        lines[5] = String.join("",
+                " *     * ", " *     * ", " *        ", "       * ");
+
+        lines[6] = String.join("",
+                "  *****  ", "  *****  ", " *        ", "  *****  ");
+
+        // Step 3: Print banner using enhanced for loop
+        for (String line : lines) {
+            System.out.println(line);
+        }
     }
 }
