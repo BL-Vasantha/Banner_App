@@ -1,33 +1,15 @@
-✔ UC4: Render OOPS as Banner using Arrays and Loop
+🎯 UC5: Render OOPS as Banner using Inline Array Initialization
 
-Drawback of UC3 Approach:
+Drawback of UC4 Approach:
 
-Individual print statements are still required, making code repetitive and hard to maintain
+UC4 requires separate statements to declare and populate the String array.
 
-Improvement in UC4:
+This is slightly verbose, although functional.
 
-All banner lines are stored in a String array
+Improvement in UC5:
 
-A for-each loop iterates through the array to print each line
+Declare and populate the String array inline using String.join() calls.
 
-Modularity, readability, and maintainability improved
+Reduces verbosity while maintaining modularity and readability.
 
-Key Concepts Used:
-
-String Array: Store all lines of the OOPS banner in a 1D array
-
-Array Creation & Population: Lines of each letter stored and combined into the array
-
-Enhanced For Loop: Prints all banner lines sequentially
-
-Visual Output: Maintains the same 7-line format as UC3
-
-Benefits:
-
-Eliminates repetitive System.out.println() calls
-
-Centralizes banner lines in a single data structure
-
-Easy to modify or extend banner letters
-
-Cleaner and readable code structure
+Keeps the banner output consistent with UC4.
