@@ -1,25 +1,28 @@
-/**
- * OOPSBannerApp UC5 – Render OOPS as Banner using Inline Array Initialization
- *
- * Author: Developer
- * Version: 5.3
- */
 public class OOPSBannerApp {
 
+    /**
+     * OOPSBannerApp UC5 – Render OOPS as Banner using Inline Array Initialization
+     *
+     * This use case extends UC4 by defining and populating the String array
+     * at the time of declaration using String.join() method to create each
+     * line of the banner.
+     *
+     * @author Developer
+     * @version 5.0
+     */
     public static void main(String[] args) {
-
-        // Inline array initialization with proper S curve, keeping O and P unchanged
+        // Inline declaration and initialization of banner lines
         String[] lines = {
-                String.join("", "  ***  ", "  ***  ", " *****", "  *****"),  // Top line
-                String.join("", " ** ** ", " ** ** ", " **  **", " **    "),  // Upper vertical
-                String.join("", " ** ** ", " ** ** ", " **  **", " **    "),  // Upper vertical
-                String.join("", " ** ** ", " ** ** ", " ***** ", "  *** "),  // Middle curve
-                String.join("", " ** ** ", " ** ** ", " **    ", "    ** "),  // Lower vertical
-                String.join("", " ** ** ", " ** ** ", " **    ", "    ** "),  // Lower vertical
-                String.join("", "  ***  ", "  ***  ", " **    ", " *****")   // Bottom curve
+                String.join("", "  *****  ", "  *****  ", " ******  ", "  *****  "),
+                String.join("", " *     * ", " *     * ", " *     * ", " *        "),
+                String.join("", " *     * ", " *     * ", " *     * ", " *        "),
+                String.join("", " *     * ", " *     * ", " ******  ", "  *****  "),
+                String.join("", " *     * ", " *     * ", " *        ", "       * "),
+                String.join("", " *     * ", " *     * ", " *        ", "       * "),
+                String.join("", "  *****  ", "  *****  ", " *        ", "  *****  ")
         };
 
-        // Print the banner
+        // Step 3: Print banner using enhanced for loop
         for (String line : lines) {
             System.out.println(line);
         }
