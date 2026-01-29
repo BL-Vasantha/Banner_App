@@ -1,34 +1,72 @@
+/**
+ * OOPSBannerApp UC6 – Render OOPS as Banner using Modular Methods
+ *
+ * This use case refactors the banner logic into helper methods
+ * to improve reusability, readability, and maintainability.
+
+ *
+ * @author Vasantha
+ * @version 6.0
+ */
+
 public class OOPSBannerApp {
+    // Method to generate pattern for letter 'O'
+    public static String[] getOPattern() {
+        return new String[] {
+                "  *****  ",
+                " *     * ",
+                " *     * ",
+                " *     * ",
+                " *     * ",
+                " *     * ",
+                "  *****  "
+        };
+    }
 
+    // Method to generate pattern for letter 'P'
+    public static String[] getPPattern() {
+        return new String[] {
+                " ******  ",
+                " *     * ",
+                " *     * ",
+                " ******  ",
+                " *        ",
+                " *        ",
+                " *        "
+        };
+    }
+
+    // Method to generate pattern for letter 'S'
+    public static String[] getSPattern() {
+        return new String[] {
+                "  *****  ",
+                " *        ",
+                " *        ",
+                "  *****  ",
+                "       * ",
+                "       * ",
+                "  *****  "
+        };
+    }
+
+    // Main method to display the OOPS banner
     public static void main(String[] args) {
-        // Step 1: Create String array for 7 lines
-        String[] lines = new String[7];
 
-        // Step 2: Populate array using String.join()
-        lines[0] = String.join("",
-                "  *****  ", "  *****  ", " ******  ", "  *****  ");
+        // Retrieve patterns
+        String[] oPattern = getOPattern();
+        String[] pPattern = getPPattern();
+        String[] sPattern = getSPattern();
 
-        lines[1] = String.join("",
-                " *     * ", " *     * ", " *     * ", " *        ");
-
-        lines[2] = String.join("",
-                " *     * ", " *     * ", " *     * ", " *        ");
-
-        lines[3] = String.join("",
-                " *     * ", " *     * ", " ******  ", "  *****  ");
-
-        lines[4] = String.join("",
-                " *     * ", " *     * ", " *        ", "       * ");
-
-        lines[5] = String.join("",
-                " *     * ", " *     * ", " *        ", "       * ");
-
-        lines[6] = String.join("",
-                "  *****  ", "  *****  ", " *        ", "  *****  ");
-
-        // Step 3: Print banner using enhanced for loop
-        for (String line : lines) {
-            System.out.println(line);
+        // Assemble and print banner line by line
+        for (int i = 0; i < oPattern.length; i++) {
+            System.out.println(
+                    String.join("",
+                            oPattern[i],
+                            oPattern[i],   // 'O' repeated twice
+                            pPattern[i],
+                            sPattern[i]
+                    )
+            );
         }
     }
 }
